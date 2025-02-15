@@ -9,6 +9,16 @@ st.write(
     "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
 )
 
+# Add sidebar
+sidebar = st.sidebar
+sidebar.title("Navigation")
+sidebar.write("This is the sidebar")
+
+# You can add various elements to the sidebar
+sidebar.button("Click me!")
+sidebar.selectbox("Choose an option", ["Option 1", "Option 2", "Option 3"])
+sidebar.slider("Select a value", 0, 100, 50)
+
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
